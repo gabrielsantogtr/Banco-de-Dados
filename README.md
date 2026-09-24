@@ -1,31 +1,39 @@
-Mercadinho Tropical
-Mini-Mundo
+AÇAITERIA DO VINI (MINE MUNDO)
 
-O Mercadinho Tropical é um pequeno estabelecimento comercial que vende diversos tipos de produtos, como alimentos, bebidas, produtos de limpeza e produtos de higiene.
+A açaiteria do Vini e uma pequena venda de açaí, que só trabalha com pedidos pelo WhatsAPP, localizado em Baía Formosa - RN.
+Só trabalha com açaí e algumas variedades de creme, como creme de ninho, chocolate e morango, com diversas variedades de adicionais como mm, granulado, leite em pó, banana, leite condensado, jujubas entre outras variedades.
 
-O mercadinho precisa de um sistema para controlar seus produtos, categorias, clientes e vendas realizadas.
+REGRAS DE NEGÓCIO
 
-Cada produto possui um código, nome, descrição, preço e quantidade disponível em estoque. Os produtos são organizados em categorias, como Bebidas, Alimentos, Limpeza e Higiene.
+1. Cadastro de clientes
+Cada cliente deve ter um identificador único. O telefone pode ser usado para contato e para localizar o cadastro, mas não precisa ser a chave primária.
 
-Os clientes podem realizar compras no mercadinho. Cada cliente possui um cadastro com código, nome, telefone e e-mail.
+2. Registro de pedidos
+Todo pedido deve possuir um número identificador único, uma data e um status. Um pedido pode conter um ou mais itens.
 
-Uma venda é realizada para um cliente e pode possuir um ou vários produtos. Para cada produto vendido, é registrada a quantidade e o preço unitário no momento da venda.
+3. Produtos e preços
+Todo produto deve ter nome, preço válido e categoria. O preço não pode ser negativo, e o sistema deve guardar o preço praticado na venda para que mudanças futuras não alterem pedidos antigos.
 
-O sistema deve permitir controlar o estoque dos produtos e consultar o histórico de vendas realizadas pelos clientes.
+4. Adicionais
+Um item de pedido pode ter zero, um ou vários adicionais, desde que estejam disponíveis para venda. Cada adicional deve possuir nome e preço não negativo.
 
-Regras de Negócio
-Cada cliente deve possuir um identificador único.
-Um cliente pode realizar várias vendas.
-Cada venda pertence a um único cliente.
-Uma venda deve possuir pelo menos um produto.
-Um produto pode participar de várias vendas.
-Cada produto pertence a uma única categoria.
-Uma categoria pode possuir vários produtos.
-A quantidade de um produto em uma venda deve ser maior que zero.
-O preço de venda deve ser registrado no momento da venda.
-A quantidade disponível em estoque não pode ser negativa.
-Ao realizar uma venda, a quantidade do produto no estoque deve ser reduzida.
-Um cliente pode estar cadastrado mesmo sem ter realizado nenhuma compra.
-Um produto pode estar cadastrado mesmo sem ter sido vendido.
-Cada venda possui uma data e um valor total.
-O valor total da venda é calculado pela soma dos valores dos produtos vendidos.
+5. Cálculo do total
+O subtotal de cada item deve considerar a quantidade de produtos e os adicionais escolhidos. O total do pedido deve ser a soma dos subtotais de todos os itens, acrescida de eventuais taxas e descontos aplicáveis.
+
+6. Controle de estoque
+O sistema não deve permitir a venda de uma quantidade maior que o estoque disponível. Após a confirmação da venda, o estoque dos produtos deve ser atualizado.
+
+7. Status do pedido
+O pedido pode ter status como Pendente, Em preparo, Pronto, Entregue e Cancelado. O sistema deve registrar as mudanças de status de acordo com o andamento da venda.
+
+8. Cancelamento
+Um pedido cancelado não deve ser contabilizado como uma venda concluída. Se o estoque já tiver sido baixado, o sistema deve devolver as quantidades ao estoque, conforme a política de cancelamento da loja.
+
+9. Tamanhos
+Cada produto de açaí pode ter um tamanho definido, como 300 ml, 500 ml ou 700 ml, e cada tamanho pode ter um preço diferente.
+
+10. Limite de adicionais
+A loja pode definir quantos adicionais gratuitos ou pagos o cliente pode escolher por tamanho.
+
+11. Formas de pagamento
+Cada pedido concluído deve registrar a forma de pagamento, como dinheiro, Pix ou cartão.
