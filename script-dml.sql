@@ -1,4 +1,3 @@
--- Dados fictícios para a atividade de Banco de Dados
 -- Açaiteria do Vini, Baía Formosa/RN
 -- Rodar o script-ddl.sql antes deste arquivo.
 USE acaiteria_adaptacao;
@@ -13,7 +12,7 @@ INSERT INTO Categoria (ID_categoria, Nome, Descricao, Ativa) VALUES
 (4,'Combos','Promoções com mais de um item',1),
 (5,'Sobremesas','Outras opções doces',1);
 
--- Os fornecedores e telefones abaixo são inventados para o exercício.
+
 INSERT INTO Fornecedor (Id_fornecedor, Nome, Telefone, Cidade, Ativo) VALUES
 (1,'Distribuidora Potiguar','84990001001','Natal',1),
 (2,'Frutas do Litoral','84990001002','Baía Formosa',1),
@@ -37,7 +36,6 @@ INSERT INTO Adicional (ID_adicional, Nome, Descricao, Preco, Disponivel) VALUES
 (5,'Granulado','Granulado de chocolate',2.50,1);
 
 -- Cenário 2: Cadastros feitos para receber pedidos pelo WhatsApp.
--- Nomes, datas, endereços e telefones são fictícios.
 INSERT INTO Cliente (Id_cliente, Nome, Telefone, Endereco, Data_nascimento) VALUES
 (1,'José Silva','84988881001','Rua Principal, 12, Baía Formosa','1990-04-15'),
 (2,'Maria Oliveira','84988881002','Rua das Flores, 45, Baía Formosa','1995-06-22'),
