@@ -1,5 +1,4 @@
--- AÇAITERIA DO VINI | DDL | MySQL 8.0.16+
--- Execute antes de script-dml.sql. ATENÇÃO: recria o banco e apaga dados anteriores.
+-- AÇAITERIA DO VINI | DDL 
 DROP DATABASE IF EXISTS acaiteria_adaptacao;
 CREATE DATABASE acaiteria_adaptacao CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE acaiteria_adaptacao;
